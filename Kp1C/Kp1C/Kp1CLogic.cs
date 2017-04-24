@@ -141,7 +141,34 @@ namespace Scada.Comm.Devices
                 writeState = false;
             }
 
+            // HttpWebRequest request = (HttpWebRequest)WebRequest.Create("http://1c.elopak.ru/elopak_1c_v83/ws/ws1.1cws");
 
+            // request.Headers.Add("SOAPAction", "\"http://schemas.xmlsoap.org/soap/envelope/\"");
+            // request.ContentType = "text/xml;charset=\"utf-8\"";
+            // request.Accept = "text/xml";
+            // request.Method = "POST";
+            // request.Timeout = 10000;
+
+            // // XML-RPC-команда
+            // XmlDocument doc = new XmlDocument();
+            // doc.Load(Directory.GetCurrentDirectory() + "/request.xml");
+
+            // byte[] bytes = Encoding.Default.GetBytes(doc.OuterXml);
+            // string commandUTF8 = Encoding.UTF8.GetString(bytes);
+
+            // Console.WriteLine("command = " + commandUTF8);
+
+
+
+            // StreamWriter streamW = new StreamWriter(request.GetRequestStream());
+
+            //     streamW.Write(commandUTF8);
+            // streamW.Close();
+            //// Thread.Sleep(1000);
+            // try
+            // {
+            //     WebResponse resp = request.GetResponse();
+            //     //  XDocument loaded = XDocument.Load(resp.GetResponseStream()); 
 
             XmlDocument loaded = new XmlDocument();
             loaded.Load(@"C:\SCADA\ScadaComm\Config" + @"\reply.xml");
